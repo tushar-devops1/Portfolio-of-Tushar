@@ -67,7 +67,7 @@ export const CustomCursor = ({ enabled }) => {
     <>
       {/* Small precision center dot */}
       <div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-amber-400 rounded-full pointer-events-none z-50 transition-transform duration-75 ease-out shadow-[0_0_10px_#f59e0b]"
+        className="fixed top-0 left-0 w-2.5 h-2.5 bg-amber-400 rounded-full pointer-events-none z-[100] transition-transform duration-75 ease-out shadow-[0_0_10px_#f59e0b]"
         style={{
           transform: `translate3d(${position.x - 5}px, ${position.y - 5}px, 0) scale(${
             isClicked ? 0.6 : isHovered ? 1.5 : 1
@@ -77,7 +77,7 @@ export const CustomCursor = ({ enabled }) => {
 
       {/* Outer glowing aura ring */}
       <div
-        className={`fixed top-0 left-0 rounded-full pointer-events-none z-50 transition-all duration-300 ease-out border ${
+        className={`fixed top-0 left-0 rounded-full pointer-events-none z-[100] transition-all duration-300 ease-out border ${
           isHovered
             ? 'w-14 h-14 border-amber-400/80 bg-amber-500/10 shadow-[0_0_25px_rgba(245,158,11,0.3)] backdrop-blur-[1px]'
             : 'w-8 h-8 border-purple-400/50 bg-purple-500/5 shadow-[0_0_15px_rgba(139,92,246,0.2)]'

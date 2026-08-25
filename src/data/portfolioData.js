@@ -5,7 +5,8 @@ export const personalInfo = {
     "DevOps Engineer",
     "Cloud Support Engineer",
     "Build & Release Engineer",
-    "Full-Stack Developer",
+    "Backend Developer",
+    "Python Developer",
     "Linux & Automation Specialist"
   ],
   location: "Pune, Maharashtra, India",
@@ -213,6 +214,39 @@ export const projectsData = [
       ],
       gallery: [
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+      ]
+    }
+  },
+  {
+    id: "proj-5",
+    title: "Portfolio Website — Cloud & DevOps Engineer",
+    category: "fullstack",
+    subtitle: "Interactive React 18 Portfolio Deployed on Vercel",
+    description: "A luxury, interactive single-page portfolio built with React 18, Vite, and Tailwind CSS. Features an animated canvas-based particle network, custom glowing ring cursor, typewriter role animations, 3D tilt hero card, glassmorphism cards, scroll progress bar, scroll-spy navigation, and confetti-enabled project showcase. Fully responsive with a mobile hamburger drawer. Deployed on Vercel's global edge network for optimal performance.",
+    image: "https://images.unsplash.com/photo-1488571554024-6a0c0b70a4e9?auto=format&fit=crop&w=1200&q=80",
+    tags: ["React 18", "Vite", "Tailwind CSS", "JavaScript", "Vercel", "Responsive Design"],
+    featured: true,
+    github: "https://github.com/tushar-devops1/Portfolio-of-Tushar",
+    liveDemo: "https://tushar-gavali.vercel.app",
+    metrics: [
+      { label: "Page Load Time", val: "< 1s" },
+      { label: "Lighthouse Performance", val: "95+" },
+      { label: "Uptime", val: "99.9%" },
+      { label: "Global CDN", val: "Vercel Edge" }
+    ],
+    details: {
+      challenge: "Building a visually striking, highly interactive portfolio that showcases DevOps and full-stack expertise while maintaining excellent performance and responsiveness across all devices.",
+      solution: "Architected a modular component-based React 18 application with Vite for blazing-fast builds, Tailwind CSS for utility-first styling with custom glassmorphism effects, and deployed to Vercel's global edge network for instant worldwide delivery.",
+      architecture: [
+        "React 18 + Vite SPA with modular component architecture and hook-based state",
+        "Tailwind CSS with custom amber/purple palette and glassmorphism card effects",
+        "Canvas-based interactive particle network with mouse interaction",
+        "Custom glowing ring cursor, typewriter role animations, and 3D tilt hero card",
+        "Vercel global edge network deployment with automatic CI/CD from GitHub"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1488571554024-6a0c0b70a4e9?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
       ]
     }
   }
