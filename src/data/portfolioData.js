@@ -298,6 +298,6 @@ export const testimonialsData = [
     quote: "Tushar demonstrated strong Python software development skills, clean coding practices, and disciplined Git version control during the Deloitte Australia simulation.",
     author: "Deloitte Australia Tech Team",
     role: "Virtual Internship Mentor",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
   }
 ];

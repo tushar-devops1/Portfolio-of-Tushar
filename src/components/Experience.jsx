@@ -70,7 +70,7 @@ export const Experience = () => {
                           <Calendar size={12} />
                           {exp.period}
                         </span>
-                        <span className="text-[11px] font-mono-code text-purple-300 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20">
+                        <span className="text-xs font-mono-code text-purple-300 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20">
                           {exp.type}
                         </span>
                       </div>
@@ -113,7 +113,7 @@ export const Experience = () => {
                       {/* Tech stack pill tags */}
                       <div className="flex flex-wrap gap-1.5 pt-4">
                         {exp.tech.map((t) => (
-                          <span key={t} className="text-[10px] font-mono-code px-2 py-0.5 rounded-md bg-[#0a0812] border border-white/10 text-gray-300">
+                          <span key={t} className="text-xs font-mono-code px-2 py-0.5 rounded-lg bg-[#0a0812] border border-white/10 text-gray-300">
                             {t}
                           </span>
                         ))}

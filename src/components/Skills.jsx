@@ -110,7 +110,7 @@ export const Skills = () => {
                     <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">
                       {skill.name}
                     </h3>
-                    <span className="text-[11px] font-mono-code text-gray-400">Exp: {skill.exp}</span>
+                    <span className="text-xs font-mono-code text-gray-400">Exp: {skill.exp}</span>
                   </div>
                 </div>
 
@@ -139,7 +139,7 @@ export const Skills = () => {
                       fill="transparent"
                     />
                   </svg>
-                  <span className="absolute text-[10px] font-mono-code font-bold text-amber-300">
+                  <span className="absolute text-xs font-mono-code font-bold text-amber-300">
                     {skill.level}%
                   </span>
                  </div>

@@ -18,7 +18,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-purple-600 p-[1px]">
-              <div className="w-full h-full bg-[#0d0b14] rounded-[11px] flex items-center justify-center">
+              <div className="w-full h-full bg-[#0d0b14] rounded-xl flex items-center justify-center">
                 <span className="font-display font-bold text-sm gold-gradient">T</span>
               </div>
             </div>
@@ -26,7 +26,7 @@ export const Footer = () => {
               <div className="font-display font-bold text-white tracking-wider">
                 TUSHAR<span className="text-amber-500">.</span>
               </div>
-              <div className="text-[10px] font-mono-code text-gray-400">
+              <div className="text-xs font-mono-code text-gray-400">
                 Crafting modern full-stack web applications
               </div>
             </div>
@@ -38,6 +38,7 @@ export const Footer = () => {
             <a href="#experience" onClick={() => soundFX.playClick()} className="hover:text-amber-300 transition-colors">Experience</a>
             <a href="#skills" onClick={() => soundFX.playClick()} className="hover:text-amber-300 transition-colors">Skills</a>
             <a href="#projects" onClick={() => soundFX.playClick()} className="hover:text-amber-300 transition-colors">Projects</a>
+            <a href="#certs" onClick={() => soundFX.playClick()} className="hover:text-amber-300 transition-colors">Credentials</a>
             <a href="#contact" onClick={() => soundFX.playClick()} className="hover:text-amber-300 transition-colors">Contact</a>
           </div>
 

@@ -198,7 +198,7 @@ export const Contact = () => {
                       type="button"
                       onClick={() => handleChipClick(chip)}
                       onMouseEnter={() => soundFX.playHover()}
-                      className="text-[11px] font-mono-code px-3 py-1 rounded-full bg-[#161226] border border-purple-500/20 text-gray-300 hover:border-amber-500/40 hover:text-amber-300 transition-colors"
+                      className="text-xs font-mono-code px-3 py-1 rounded-full bg-[#161226] border border-purple-500/20 text-gray-300 hover:border-amber-500/40 hover:text-amber-300 transition-colors"
                     >
                       + {chip}
                     </button>

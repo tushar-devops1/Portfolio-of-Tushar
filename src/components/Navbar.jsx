@@ -71,7 +71,7 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
           className="group flex items-center gap-3 cursor-pointer"
         >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-purple-600 p-[1px] shadow-[0_0_15px_rgba(245,158,11,0.3)] group-hover:scale-105 transition-transform duration-300">
-            <div className="w-full h-full bg-[#0d0b14] rounded-[11px] flex items-center justify-center">
+            <div className="w-full h-full bg-[#0d0b14] rounded-xl flex items-center justify-center">
               <span className="font-display font-bold text-lg gold-gradient">T</span>
             </div>
           </div>
@@ -79,7 +79,7 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
             <span className="font-display font-bold text-lg tracking-wider text-white group-hover:text-amber-400 transition-colors">
               TUSHAR<span className="text-amber-500">.</span>
             </span>
-            <span className="text-[10px] font-mono-code text-purple-300/70 tracking-widest uppercase">Cloud & DevOps</span>
+            <span className="text-xs font-mono-code text-purple-300/70 tracking-widest uppercase">Cloud & DevOps</span>
           </div>
         </a>
 

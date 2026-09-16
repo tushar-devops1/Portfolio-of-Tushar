@@ -52,7 +52,7 @@ export const Projects = () => {
         </div>
 
         {/* Projects Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-start">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -74,7 +74,7 @@ export const Projects = () => {
                 
                 {/* Category Badge overlay */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-[#0d0a16]/80 backdrop-blur-md border border-amber-500/30 text-[11px] font-mono-code text-amber-300">
+                  <span className="px-3 py-1 rounded-full bg-[#0d0a16]/80 backdrop-blur-md border border-amber-500/30 text-xs font-mono-code text-amber-300">
                     {project.category.toUpperCase()}
                   </span>
                 </div>
@@ -104,13 +104,13 @@ export const Projects = () => {
                   {project.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-mono-code px-2 py-0.5 rounded-md bg-[#0a0812] border border-white/10 text-gray-300"
+                      className="text-xs font-mono-code px-2 py-0.5 rounded-lg bg-[#0a0812] border border-white/10 text-gray-300"
                     >
                       {tag}
                     </span>
                   ))}
                   {project.tags.length > 4 && (
-                    <span className="text-[10px] font-mono-code px-2 py-0.5 rounded-md bg-[#0a0812] border border-white/10 text-amber-400">
+                    <span className="text-xs font-mono-code px-2 py-0.5 rounded-lg bg-[#0a0812] border border-white/10 text-amber-400">
                       +{project.tags.length - 4}
                     </span>
                   )}

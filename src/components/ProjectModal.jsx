@@ -200,7 +200,7 @@ export const ProjectModal = ({ project, onClose }) => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] font-mono-code px-2.5 py-1 rounded-lg bg-[#181428] border border-purple-500/20 text-purple-200"
+                    className="text-xs font-mono-code px-2.5 py-1 rounded-lg bg-[#181428] border border-purple-500/20 text-purple-200"
                   >
                     {tag}
                   </span>

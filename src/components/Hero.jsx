@@ -183,7 +183,7 @@ export const Hero = ({ onOpenResume }) => {
                     <div className="w-full h-full rounded-full bg-[#0d0a16] flex flex-col items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
                       <div className="absolute inset-0 bg-radial-gradient from-amber-500/10 to-transparent" />
                       <span className="font-display text-5xl font-black gold-gradient">T</span>
-                      <span className="text-[11px] font-mono-code text-purple-300 mt-1">DEVOPS & CLOUD</span>
+                      <span className="text-xs font-mono-code text-purple-300 mt-1">DEVOPS & CLOUD</span>
                     </div>
                   </div>
 

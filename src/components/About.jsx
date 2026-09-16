@@ -91,11 +91,11 @@ export const About = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="glass-card p-6 rounded-3xl border border-purple-500/20 space-y-4">
               <div className="flex items-center justify-between">
-                <h4 className="font-mono-code text-sm font-semibold text-amber-400 uppercase tracking-wider flex items-center gap-2">
+                <h4 className="font-mono-code text-sm font-semibold text-amber-400 tracking-wider flex items-center gap-2">
                   <Cpu size={16} />
                   <span>Engineering Pillars</span>
                 </h4>
-                <span className="text-[10px] font-mono-code text-gray-400">BENCHMARK 2026</span>
+                <span className="text-xs font-mono-code text-gray-400">BENCHMARK 2026</span>
               </div>
 
               {/* Skill distribution bars */}
@@ -140,7 +140,7 @@ export const About = () => {
                     />
                     <div>
                       <div className="text-xs font-bold text-white">{testimonialsData[activeTestimonial].author}</div>
-                      <div className="text-[10px] text-purple-300">{testimonialsData[activeTestimonial].role}</div>
+                      <div className="text-xs text-purple-300">{testimonialsData[activeTestimonial].role}</div>
                     </div>
                   </div>
 
@@ -154,8 +154,8 @@ export const About = () => {
                           setActiveTestimonial(i);
                         }}
                         aria-label={`View testimonial ${i + 1}`}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          activeTestimonial === i ? 'w-5 bg-amber-400' : 'bg-white/20 hover:bg-white/40'
+                        className={`w-4 h-4 rounded-full transition-all ${
+                          activeTestimonial === i ? 'w-7 bg-amber-400' : 'bg-white/20 hover:bg-white/40'
                         }`}
                       />
                     ))}
