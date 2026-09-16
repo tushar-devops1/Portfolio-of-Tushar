@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Send, Copy, Check, Github, Linkedin, Twitter, Mess
 import confetti from 'canvas-confetti';
 import { personalInfo } from '../data/portfolioData';
 import { soundFX } from '../utils/soundEffects';
+import { submitToDatabase, sendEmailViaEmailJS } from '../utils/contactService';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export const Contact = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const quickChips = [
     "Hiring for DevOps / Cloud Role",
@@ -44,30 +47,45 @@ export const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    soundFX.playSuccess();
-    setSubmitted(true);
+    if (submitting) return;
+    setSubmitting(true);
+    setSubmitError('');
 
     try {
-      confetti({
-        particleCount: 50,
-        spread: 80,
-        origin: { y: 0.6 },
-        colors: ['#f59e0b', '#8b5cf6', '#34d399']
-      });
-    } catch (err) {}
+      await Promise.all([
+        submitToDatabase(formData),
+        sendEmailViaEmailJS(formData),
+      ]);
+      soundFX.playSuccess();
+      setSubmitted(true);
 
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        subject: 'Full-Stack Project Inquiry',
-        budget: '$5k - $15k',
-        message: ''
-      });
-    }, 4000);
+      try {
+        confetti({
+          particleCount: 50,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ['#f59e0b', '#8b5cf6', '#34d399']
+        });
+      } catch (err) {}
+
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          subject: 'Full-Stack Project Inquiry',
+          budget: '$5k - $15k',
+          message: ''
+        });
+      }, 4000);
+    } catch (err) {
+      setSubmitError(err.message || 'Failed to send message. Please try again.');
+      soundFX.playClick();
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -284,11 +302,24 @@ export const Contact = () => {
                   <button
                     type="submit"
                     onMouseEnter={() => soundFX.playHover()}
-                    className="btn-gold w-full justify-center text-sm py-3.5"
+                    disabled={submitting}
+                    className="btn-gold w-full justify-center text-sm py-3.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    <span>Send Message Now</span>
-                    <Send size={16} />
+                    {submitting ? (
+                      <span>Sending...</span>
+                    ) : (
+                      <>
+                        <span>Send Message Now</span>
+                        <Send size={16} />
+                      </>
+                    )}
                   </button>
+
+                  {submitError && (
+                    <div className="text-center text-sm text-red-400 font-mono-code animate-fadeIn pt-2">
+                      {submitError}
+                    </div>
+                  )}
                 </form>
               )}
 

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Volume2, VolumeX, MousePointer, Sparkles, Menu, X, FileText } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 import { soundFX } from '../utils/soundEffects';
+import lenis from '../utils/lenis';
 
 export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursorEnabled, onOpenResume }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,7 +50,7 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
     setMobileMenuOpen(false);
     const elem = document.getElementById(id);
     if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
+      lenis.scrollTo(`#${id}`, { smooth: true });
     }
   };
 

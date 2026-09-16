@@ -34,26 +34,30 @@ export const Certifications = () => {
           </p>
         </div>
 
-        {/* Education Card */}
+        {/* Education Cards */}
         {educationData && educationData.length > 0 && (
-          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/30 bg-gradient-to-r from-purple-950/20 via-[#120f24] to-amber-950/20 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
-                <GraduationCap size={28} />
+          <div className="space-y-4">
+            {educationData.map((edu) => (
+              <div key={edu.id} className="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/30 bg-gradient-to-r from-purple-950/20 via-[#120f24] to-amber-950/20 space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+                    <GraduationCap size={28} />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono-code text-amber-400 uppercase tracking-wider">Higher Education</span>
+                    <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-white/10 text-xs font-mono-code text-gray-300">
+                  <div>
+                    <span className="text-purple-300 font-semibold">{edu.institution}</span> — {edu.location}
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 w-fit">
+                    {edu.period}
+                  </span>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-mono-code text-amber-400 uppercase tracking-wider">Higher Education</span>
-                <h3 className="text-xl font-bold text-white">{educationData[0].degree}</h3>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-white/10 text-xs font-mono-code text-gray-300">
-              <div>
-                <span className="text-purple-300 font-semibold">{educationData[0].institution}</span> — {educationData[0].location}
-              </div>
-              <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 w-fit">
-                {educationData[0].period}
-              </span>
-            </div>
+            ))}
           </div>
         )}
 

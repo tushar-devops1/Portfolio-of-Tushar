@@ -290,6 +290,14 @@ export const educationData = [
     institution: "B.P.H.E. Society's Ahmednagar College",
     location: "Ahmednagar, Maharashtra",
     period: "March 2020 — November 2023"
+  },
+  {
+    id: "edu-2",
+    degree: "Master of Computer Applications (MCA)",
+    field: "Cloud Computing",
+    institution: "Manipal University Jaipur",
+    location: "Online",
+    period: "September 2026 — September 2028"
   }
 ];
 
@@ -301,3 +309,84 @@ export const testimonialsData = [
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
   }
 ];
+
+export const resumeData = {
+  name: "Tushar Gavali",
+  contact: {
+    location: "Pune, Maharashtra, India",
+    phone: "+91 9022655575",
+    email: "133tushargavali@gmail.com",
+    linkedin: "linkedin.com/in/tushar-gavali-590662314",
+    github: "github.com/tushar-devops1",
+    portfolio: "tushar-gavali.vercel.app"
+  },
+  summary: "Entry-level Cloud and DevOps professional with a BCA in Computer Science and hands-on project experience with AWS infrastructure, Linux, Docker, Python, Git/GitHub, and cloud networking. Built and deployed an AWS web application using EC2, Application Load Balancer, Auto Scaling, and security controls, and containerized a Python application using Docker and multi-stage builds. Strong foundation in troubleshooting, networking fundamentals, automation concepts, and infrastructure operations; seeking Cloud Support, Cloud Operations, or Junior DevOps opportunities.",
+  skills: [
+    { category: "Cloud & AWS", items: "AWS, EC2, VPC, S3, Elastic Load Balancer, Auto Scaling, IAM, Security Groups, NACLs, Route Tables, Internet Gateway, NAT Gateway, VPC Peering, VPC Endpoints" },
+    { category: "DevOps & Containers", items: "Docker, CI/CD concepts, Infrastructure as Code (IaC), Jenkins, Terraform" },
+    { category: "Linux & Networking", items: "Linux (Ubuntu, CentOS, Amazon Linux), Bash, Shell Scripting, Nginx, TCP/IP, DNS, HTTP" },
+    { category: "Programming & Tools", items: "Python (OOP), Git, GitHub" }
+  ],
+  projects: [
+    {
+      title: "AWS Auto-Scaling Web Application",
+      year: "2024",
+      tags: "AWS EC2, Application Load Balancer, Auto Scaling, Linux, Security Groups",
+      description: [
+        "Architected and deployed a highly available web application on AWS using multiple EC2 instances behind an Application Load Balancer and Auto Scaling.",
+        "Configured target-tracking Auto Scaling policies to respond to changing traffic demand and maintain application availability.",
+        "Configured security groups and applied EC2 right-sizing practices while gaining hands-on experience with scalable infrastructure design."
+      ]
+    },
+    {
+      title: "Containerized Python Application",
+      year: "2024",
+      tags: "Python, Docker, OOP, Linux",
+      description: [
+        "Developed a Python application using object-oriented programming principles and containerized it with Docker.",
+        "Created multi-stage Docker builds to reduce image size and improve build efficiency.",
+        "Standardized application build and runtime configuration using container networking and volume management."
+      ]
+    },
+    {
+      title: "Personal Portfolio Website",
+      year: "2026",
+      tags: "GitHub, Vercel, AI-assisted development",
+      description: [
+        "Created and deployed a personal portfolio website to present technical skills, projects, and professional information.",
+        "Maintained source code with GitHub and deployed the live portfolio on Vercel."
+      ]
+    }
+  ],
+  experience: [
+    {
+      title: "Python Development Virtual Intern",
+      year: "2024",
+      company: "Deloitte Australia — Technology Job Simulation",
+      location: "Remote",
+      description: [
+        "Completed a simulated Python software development project using object-oriented programming and agile methodologies in enterprise-style tasks.",
+        "Practiced code quality, testing, version control, technical communication, and security/compliance considerations in a simulated environment."
+      ]
+    }
+  ],
+  education: [
+    {
+      degree: "Master of Computer Applications (MCA) — Cloud Computing",
+      period: "2026–2028",
+      institution: "Manipal University Jaipur",
+      details: "Online | Commencing September 2026"
+    },
+    {
+      degree: "Bachelor of Computer Applications (BCA) — Computer Science",
+      period: "2020–2024",
+      institution: "B.P.H.E. Society's Ahmednagar College",
+      details: "Ahmednagar, Maharashtra"
+    }
+  ],
+  certifications: [
+    "Deloitte Australia Technology Job Simulation — Virtual Internship Program",
+    "Technical Training: AWS Cloud Computing, Docker Containerization, Terraform Infrastructure as Code"
+  ],
+  targetRoles: ["Cloud Support Engineer", "AWS Cloud Support", "Cloud Operations", "Junior Cloud Engineer", "DevOps Trainee", "Junior DevOps Engineer"]
+};

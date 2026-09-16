@@ -2,11 +2,12 @@ import React from 'react';
 import { ArrowUp, Heart, Sparkles, Terminal } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { soundFX } from '../utils/soundEffects';
+import lenis from '../utils/lenis';
 
 export const Footer = () => {
   const scrollToTop = () => {
     soundFX.playClick();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    lenis.scrollTo(0, { smooth: true });
   };
 
   return (

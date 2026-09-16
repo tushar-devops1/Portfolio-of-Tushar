@@ -13,6 +13,9 @@ yarn-debug.log*
 yarn-error.log*
 *.log
 
+# Kilo planning
+.kilo/
+
 # Editor / OS
 .vscode/*
 !.vscode/extensions.json
