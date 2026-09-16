@@ -16,6 +16,9 @@ yarn-error.log*
 # Kilo planning
 .kilo/
 
+# Environment variables (keep .env.example for template)
+.env
+
 # Editor / OS
 .vscode/*
 !.vscode/extensions.json
