@@ -15,9 +15,9 @@ export const About = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono-code text-purple-300">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-mono-code text-amber-300">
             <User size={14} className="text-amber-400" />
-            <span>DISCOVER MY BACKGROUND</span>
+            <span>Discover My Background</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
             About <span className="gold-gradient">Me & Craft</span>
@@ -31,10 +31,10 @@ export const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Interactive Bio Tabs */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 w-full space-y-3">
             
             {/* Tab selection buttons */}
-            <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-[#120e20] border border-purple-500/15 backdrop-blur-md">
+            <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-[#120e20] border border-purple-500/15 backdrop-blur-md w-full">
               {aboutTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -55,17 +55,17 @@ export const About = () => {
             </div>
 
             {/* Active Tab Card Content */}
-            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/20 space-y-6 min-h-[220px]">
+            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/20 space-y-6 min-h-[360px]">
               <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
                 <Sparkles className="text-amber-400" size={22} />
                 <span>{currentTabObj.title}</span>
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-light pl-8">
                 {currentTabObj.content}
               </p>
 
               {/* Core Commitments Checklist */}
-              <div className="pt-4 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="pt-4 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-3 pl-8">
                 <div className="flex items-center gap-2 text-xs font-mono-code text-purple-200">
                   <CheckCircle2 size={16} className="text-emerald-400" />
                   <span>Sub-Second Web Vitals</span>
@@ -153,6 +153,7 @@ export const About = () => {
                           soundFX.playClick();
                           setActiveTestimonial(i);
                         }}
+                        aria-label={`View testimonial ${i + 1}`}
                         className={`w-2 h-2 rounded-full transition-all ${
                           activeTestimonial === i ? 'w-5 bg-amber-400' : 'bg-white/20 hover:bg-white/40'
                         }`}

@@ -56,7 +56,7 @@ export const Skills = () => {
         </div>
 
         {/* Controls: Category Filter & Search Input */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-2xl bg-[#120f1e] border border-purple-500/15 w-full md:w-auto">
@@ -99,7 +99,7 @@ export const Skills = () => {
             <div
               key={idx}
               onMouseEnter={() => soundFX.playHover()}
-              className="glass-card p-5 rounded-2xl border border-purple-500/15 space-y-4 hover:border-amber-500/40 transition-all group"
+              className="glass-card p-5 rounded-2xl border border-purple-500/15 space-y-4 hover:border-amber-500/40 transition-all group h-full"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -142,15 +142,7 @@ export const Skills = () => {
                   <span className="absolute text-[10px] font-mono-code font-bold text-amber-300">
                     {skill.level}%
                   </span>
-                </div>
-              </div>
-
-              {/* Skill Progress Bar */}
-              <div className="h-1.5 w-full bg-[#0a0812] rounded-full overflow-hidden border border-white/5">
-                <div
-                  className="h-full bg-gradient-to-r from-amber-500 via-purple-500 to-amber-300 rounded-full transition-all duration-1000"
-                  style={{ width: `${skill.level}%` }}
-                />
+                 </div>
               </div>
             </div>
           ))}

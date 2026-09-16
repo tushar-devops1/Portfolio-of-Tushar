@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, ArrowRight, Download, Terminal, Award, FolderCheck, GitCommit, Smile, Code, Layers, Zap } from 'lucide-react';
+import { Sparkles, ArrowRight, Send, Terminal, Award, FolderCheck, GitCommit, Smile, Code, Layers, Zap } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { soundFX } from '../utils/soundEffects';
 
@@ -141,20 +141,9 @@ export const Hero = ({ onOpenResume }) => {
                 onMouseEnter={() => soundFX.playHover()}
                 className="btn-outline-purple"
               >
+                <Send size={16} className="text-amber-400" />
                 <span>Get In Touch</span>
               </a>
-
-              <button
-                onClick={() => {
-                  soundFX.playClick();
-                  onOpenResume();
-                }}
-                onMouseEnter={() => soundFX.playHover()}
-                className="px-4 py-3 rounded-full text-xs font-mono-code text-gray-300 hover:text-amber-300 flex items-center gap-2 border border-white/10 hover:border-amber-500/30 transition-all"
-              >
-                <Download size={14} className="text-amber-400" />
-                Resume PDF
-              </button>
             </div>
 
           </div>

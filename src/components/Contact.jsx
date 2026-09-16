@@ -191,7 +191,7 @@ export const Contact = () => {
                 <span className="text-xs font-mono-code text-purple-300 uppercase tracking-wider block">
                   Quick Topics / One-Click Fill:
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   {quickChips.map((chip) => (
                     <button
                       key={chip}

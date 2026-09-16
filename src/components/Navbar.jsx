@@ -54,7 +54,7 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-      scrolled ? 'bg-[#070709]/80 backdrop-blur-xl border-b border-amber-500/10 py-3 shadow-lg shadow-black/40' : 'bg-transparent py-5'
+      scrolled ? 'bg-[#070709]/80 backdrop-blur-xl border-b border-amber-500/10 py-3 shadow-lg shadow-black/40' : 'bg-[#070709]/40 backdrop-blur-sm py-5'
     }`}>
       {/* Scroll progress bar */}
       <div 
@@ -109,10 +109,11 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
           {/* Sound FX Toggle */}
           <button
             onClick={() => {
-              const newState = soundFX.toggleSound();
-              setSoundEnabled(newState);
+              soundFX.playClick();
+              setSoundEnabled(soundFX.toggleSound());
             }}
             onMouseEnter={() => soundFX.playHover()}
+            aria-label="Toggle sound"
             title={soundEnabled ? "Mute Sound FX" : "Enable Sound FX"}
             className="p-2 rounded-full bg-[#161224] border border-purple-500/20 text-purple-300 hover:text-amber-400 hover:border-amber-500/40 transition-all hover:scale-105"
           >
@@ -126,11 +127,12 @@ export const Navbar = ({ soundEnabled, setSoundEnabled, cursorEnabled, setCursor
               setCursorEnabled(!cursorEnabled);
             }}
             onMouseEnter={() => soundFX.playHover()}
+            aria-label="Toggle custom cursor"
             title={cursorEnabled ? "Disable Glowing Ring Cursor" : "Enable Glowing Ring Cursor"}
             className={`p-2 rounded-full border transition-all hover:scale-105 ${
               cursorEnabled 
                 ? 'bg-amber-500/15 border-amber-500/40 text-amber-400' 
-                : 'bg-[#161224] border-purple-500/20 text-gray-500'
+                : 'bg-[#161224] border border-purple-500/20 text-gray-400'
             }`}
           >
             <MousePointer size={16} />
